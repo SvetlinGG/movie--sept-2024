@@ -11,9 +11,11 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
+app.use(express.static('public'));
+
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('home');
 })
 
 app.listen( 1000, () =>  console.log('Server listening on http://localhost:1000'));
