@@ -1,5 +1,7 @@
-const express = require('express')
-const handlebars = require('express-handlebars');
+import express  from 'express';
+import handlebars from 'express-handlebars';
+
+import homeController from './controllers/homeController.js';
 
 
 
@@ -14,8 +16,6 @@ app.set('views', './src/views');
 app.use(express.static('public'));
 
 
-app.get('/', (req, res) => {
-    res.render('home');
-})
+app.use(homeController);
 
 app.listen( 1000, () =>  console.log('Server listening on http://localhost:1000'));
