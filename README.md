@@ -13,3 +13,4 @@ JS Back-End Course
 9. Add service and data layers
 10. Add create page
 11. Add Details page
+12. Add Search page
