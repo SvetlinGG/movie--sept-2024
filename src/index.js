@@ -2,14 +2,13 @@ import express  from 'express';
 import handlebarsInit from './config/handlebarsInit.js';
 
 import routes from './routes.js';
+import expressInit from './config/expressInit.js';
 
 const app = express();
+
 handlebarsInit(app);
+expressInit(app);
 
-
-
-app.use(express.urlencoded({extended: false}));
-app.use(express.static('public'));
 app.use(routes);
 
 
